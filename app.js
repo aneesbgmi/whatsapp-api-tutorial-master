@@ -353,7 +353,7 @@ if (msg.body == 'Computer System Hardware') {
     const media1 = MessageMedia.fromFilePath('note/ct/s5/pmse/M1-PM&SE.pdf');
     const media2 = MessageMedia.fromFilePath('note/ct/s5/pmse/M2-PM&SE.pdf');
     const media3 = MessageMedia.fromFilePath('note/ct/s5/pmse/M3-PM&SE.pdf');
-    const media3 = MessageMedia.fromFilePath('note/ct/s5/pmse/M4-PM&SE.pdf');
+    const media4 = MessageMedia.fromFilePath('note/ct/s5/pmse/M4-PM&SE.pdf');
     msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');msg.reply(media4,'');
   }
 
@@ -367,23 +367,24 @@ if (msg.body == 'Computer System Hardware') {
     const media7 = MessageMedia.fromFilePath('note/ct/s5/wp/WT_Module 2 - Javascript-1.pdf');
     const media8 = MessageMedia.fromFilePath('note/ct/s5/wp/WT_Module 2 - Javascript-2.pdf');
     const media9 = MessageMedia.fromFilePath('note/ct/s5/wp/WT_Module 2 - Javascript.pdf');
-    msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');
+    msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');msg.reply(media4,'');msg.reply(media5,'');
+	  msg.reply(media6,'');msg.reply(media7,'');msg.reply(media8,'');msg.reply(media9,'');
   }
 
   if (msg.body == 'Microprocessor and Interfacing') {
     const media1 = MessageMedia.fromFilePath('note/ct/s5/mp/MODULE 1 MP.pdf');
     const media2 = MessageMedia.fromFilePath('note/ct/s5/mp/MODULE 2 MP.pdf');
     const media3 = MessageMedia.fromFilePath('note/ct/s5/mp/MODULE 3 MP.pdf');
-    const media3 = MessageMedia.fromFilePath('note/ct/s5/mp/MODULE 4 MP.pdf');
-    msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');
+    const media4 = MessageMedia.fromFilePath('note/ct/s5/mp/MODULE 4 MP.pdf');
+    msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');msg.reply(media4,'');
   }
 
   if (msg.body == 'Cloud Computing') {
     const media1 = MessageMedia.fromFilePath('note/ct/s5/cloud/cloud m1.pdf');
     const media2 = MessageMedia.fromFilePath('note/ct/s5/cloud/cloud m2.pdf');
     const media3 = MessageMedia.fromFilePath('note/ct/s5/cloud/cloud m3.pdf');
-    const media3 = MessageMedia.fromFilePath('note/ct/s5/cloud/cloud m4.pdf');
-    msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');
+    const media4 = MessageMedia.fromFilePath('note/ct/s5/cloud/cloud m4.pdf');
+    msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');msg.reply(media4,'');
   }
 
 //------------------------ct s6 --------------------------------
@@ -398,15 +399,15 @@ if (msg.body == 'Computer System Hardware') {
     const media1 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/Ethernet-1-.pdf');
     const media2 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/Introduction-1-.pdf');
     const media3 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/MODULE I_CN.pdf');
-    const media3 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/MODULE II_CN.pdf');
-    const media4 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/module3_CN-1-.pdf');
-    const media5 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/Module4_CN-1-.pdf');
-    const media6 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/networklayer-1-.pdf');
-    const media7 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/Networkmodel-1-.pdf');
-    const media8 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/wirelesslan-1-.pdf');
+    const media4 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/MODULE II_CN.pdf');
+    const media5 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/module3_CN-1-.pdf');
+    const media6 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/Module4_CN-1-.pdf');
+    const media7 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/networklayer-1-.pdf');
+    const media8 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/Networkmodel-1-.pdf');
+    const media9 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/wirelesslan-1-.pdf');
     msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');
     msg.reply(media4,'');msg.reply(media5,'');msg.reply(media6,'');
-    msg.reply(media7,'');msg.reply(media8,'');
+    msg.reply(media7,'');msg.reply(media8,'');msg.reply(media9,'');
   }
 
   if (msg.body == 'Smart Device Programming') {
@@ -420,16 +421,16 @@ if (msg.body == 'Computer System Hardware') {
     const media1 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_1.pdf');
     const media2 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_2_part_1.pdf');
     const media3 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_2_part_2.pdf');
-    const media3 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_3_part_1.pdf');
-    const media4 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_3_part_2.pdf');
-    const media5 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_4_part_1.pdf');
-    const media6 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_4_part_2.pdf');
-    const media7 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_MODULE_IV.pdf');
-    const media8 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_moduleII.pdf');
-    const media9 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_moduleIII-1.pdf');
+    const media4 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_3_part_1.pdf');
+    const media5 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_3_part_2.pdf');
+    const media6 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_4_part_1.pdf');
+    const media7 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_4_part_2.pdf');
+    const media8 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_MODULE_IV.pdf');
+    const media9 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_moduleII.pdf');
+    const media10 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_moduleIII-1.pdf');
     msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');
     msg.reply(media4,'');msg.reply(media5,'');msg.reply(media6,'');
-    msg.reply(media7,'');msg.reply(media8,'');msg.reply(media9,'');
+    msg.reply(media7,'');msg.reply(media8,'');msg.reply(media9,'');msg.reply(media10,'');
     
   }
 
