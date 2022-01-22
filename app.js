@@ -11,6 +11,8 @@ const axios = require('axios');
 const mime = require('mime-types');
 const { Buttons, List } = require('whatsapp-web.js');
 const { getgroups } = require('process');
+const { application } = require('express');
+const { pbkdf2 } = require('crypto');
 
 
 const port = process.env.PORT || 8000;
@@ -234,15 +236,234 @@ if (msg.body == 'Maths-2') {
 }
 
 //------------------------ct s2 --------------------------------
+if(message.body=='CT-S2'){
+  client.sendMessage(message.from, new List('Select Subject', 'S2 Subjects',[{title: 'Select Subject', rows: [{id: 'PrgC', title: 'Programming in C'}]}] ,'S2 Subjects', 'Footer here'), {caption: 'if you used a MessageMedia instance, use the caption here'});
+  }
+
+  if (msg.body == 'Programming in C') {
+
+    const media1 = MessageMedia.fromFilePath('note/ct/s2/c/ARRAY_OF_STRUCTURES.pdf');
+    const media2 = MessageMedia.fromFilePath('note/ct/s2/c/Mod4_String_Library_Functions.pdf');
+    const media3 = MessageMedia.fromFilePath('note/ct/s2/c/Module1_C.pdf');
+    const media4 = MessageMedia.fromFilePath('note/ct/s2/c/MODULE3_C.pdf');
+    const media5 = MessageMedia.fromFilePath('note/ct/s2/c/Module4_C.pdf');
+    const media6 = MessageMedia.fromFilePath('note/ct/s2/c/STRUCTURES.pdf');
+    
+    msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');msg.reply(media4,'');
+    msg.reply(media5,'');msg.reply(media6,'');
+  }
+    
+  
+
+    //------------------------ct s3 --------------------------------
+
+
+    if(message.body=='CT-S2'){
+      client.sendMessage(message.from, new List('Select Subject', 'S2 Subjects',[{title: 'Select Subject', rows: [{id: 'PrgC', title: 'Programming in C'}]}] ,'S2 Subjects', 'Footer here'), {caption: 'if you used a MessageMedia instance, use the caption here'});
+      }
+    
+
+      if(message.body=='CT-S3'){
+        
+        client.sendMessage(message.from, new List('Select Subject', 'Subjects',[{title: 'Select Subject', rows: [{id: 'dcp', title: 'Digital Computer Principles'},{id: 'dbms', title: 'Database Management System'},{id: 'ca', title: 'Computer Architecture'},{id: 'oop', title: 'Object Oriented Programming'},{id: 'esdm', title: 'Environmental Science & Disaster Management'}]}] ,'Computer Engineering Subjects', 'Footer here'), {caption: 'if you used a MessageMedia instance, use the caption here'});  
+      }
+      if (msg.body == 'Digital Computer Principles') {
+        const media1 = MessageMedia.fromFilePath('note/ct/s3/dcp/MOD 1 & 2.pdf');
+        const media2 = MessageMedia.fromFilePath('note/ct/s3/dcp/MOD 3 & 4.pdf');
+        msg.reply(media1,'');msg.reply(media2,'');
+      }
+        
+      if (msg.body == 'Database Management System') {
+        const media1 = MessageMedia.fromFilePath('note/ct/s3/dbms/Module 2 - DBMS Notes.pdf');
+        const media2 = MessageMedia.fromFilePath('note/ct/s3/dbms/Module 2 - Possible Questions.pdf');
+        msg.reply(media1,'');msg.reply(media2,'');
+      }
+
+      if (msg.body == 'Computer Architecture') {
+        const media1 = MessageMedia.fromFilePath('note/ct/s3/ca/CA_Mod-2-1.pdf');
+        const media2 = MessageMedia.fromFilePath('note/ct/s3/ca/CA_Mod-3.pdf');
+        const media3 = MessageMedia.fromFilePath('note/ct/s3/ca/CA_Mod-4.pdf');
+        const media4 = MessageMedia.fromFilePath('note/ct/s3/ca/CA.pdf');
+        msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');msg.reply(media4,'');
+      }
+      if (msg.body == 'Object Oriented Programming') {
+        const media1 = MessageMedia.fromFilePath('note/ct/s3/oop/C-- NOTES - S3CHE.pdf');
+        
+        msg.reply(media1,'');
+      }
+
+ //------------------------ct s4 --------------------------------
+
+ if(message.body=='CT-S4'){
+    
+  client.sendMessage(message.from, new List('Select Subject', 'Subjects',[{title: 'Select Subject', rows: [{id: 'dc', title: 'Data Communication'},{id: 'os', title: 'Operating Systems'},{id: 'ds', title: 'Data Structures'},{id: 'CSh', title: 'Computer System Hardware'}]}] ,'Computer Engineering Subjects', 'Footer here'), {caption: 'if you used a MessageMedia instance, use the caption here'});  
+ }
+ 
+ if (msg.body == 'Data Communication') {
+  const media1 = MessageMedia.fromFilePath('note/ct/s4/dc/DC module2-1-.pdf');
+  const media2 = MessageMedia.fromFilePath('note/ct/s4/dc/DC Module3.pdf');
+  const media3 = MessageMedia.fromFilePath('note/ct/s4/dc/DC_module2_conversion-1-.pdf');
+  msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');
+}
+
+if (msg.body == 'Operating Systems') {
+  const media1 = MessageMedia.fromFilePath('note/ct/s4/os/Module 3 - Important Questions.pdf');
+  const media2 = MessageMedia.fromFilePath('note/ct/s4/os/OS mod_IV.pdf');
+  const media3 = MessageMedia.fromFilePath('note/ct/s4/os/OS Module 1.pdf');
+  const media4 = MessageMedia.fromFilePath('note/ct/s4/os/OS Module 2.pdf');
+  const media5 = MessageMedia.fromFilePath('note/ct/s4/os/OS Module-1 Important Questions.pdf');
+  const media6 = MessageMedia.fromFilePath('note/ct/s4/os/OS Note memory mngmnt.pdf');
+  const media7 = MessageMedia.fromFilePath('note/ct/s4/os/OS_MODULE 4.pdf');
+  msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');
+  msg.reply(media4,'');msg.reply(media5,'');msg.reply(media6,'');
+  msg.reply(media7,'');
+}
+
+if (msg.body == 'Data Structures') {
+  const media1 = MessageMedia.fromFilePath('note/ct/s4/ds/DS IMP Q&ANS.pdf');
+  const media2 = MessageMedia.fromFilePath('note/ct/s4/ds/DS Module 1.pdf');
+  const media3 = MessageMedia.fromFilePath('note/ct/s4/ds/DS Module 2.pdff');
+  const media4 = MessageMedia.fromFilePath('note/ct/s4/ds/DS Module 3.pdf');
+  const media5 = MessageMedia.fromFilePath('note/ct/s4/ds/DS Module 4.pdf');
+  const media6 = MessageMedia.fromFilePath('note/ct/s4/ds/Ds_intro to algorithm.pdf');
+  
+  msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');
+  msg.reply(media4,'');msg.reply(media5,'');msg.reply(media6,'');
+}
+
+if (msg.body == 'Computer System Hardware') {
+  const media1 = MessageMedia.fromFilePath('note/ct/s4/csh/CHS Module 2.pdf');
+  const media2 = MessageMedia.fromFilePath('note/ct/s4/csh/CHS Module 3.pdf');
+  const media3 = MessageMedia.fromFilePath('note/ct/s4/csh/CSH MODULE I .pdf');
+  const media4 = MessageMedia.fromFilePath('note/ct/s4/csh/CSH MODULE III(Contd..).pdf');
+  const media5 = MessageMedia.fromFilePath('note/ct/s4/csh/CSH MODULE IV.pdf');
+  
+  msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');
+  msg.reply(media4,'');msg.reply(media5,'');
+}
+//------------------------ct s5 --------------------------------
+
+
+  if(message.body=='CT-S5'){
+
+    client.sendMessage(message.from, new List('Select Subject', 'Subjects',[{title: 'Select Subject', rows: [{id: 'pmse', title: 'PMSE'},{id: 'wp', title: 'Web Programming'},{id: 'mp', title: 'Microprocessor and Interfacing'},{id: 'cloud', title: 'Cloud Computing'}]}] ,'Computer Engineering Subjects', 'Footer here'), {caption: 'if you used a MessageMedia instance, use the caption here'});
+    
+  }
+  if (msg.body == 'PMSE') {
+    const media1 = MessageMedia.fromFilePath('note/ct/s5/pmse/M1-PM&SE.pdf');
+    const media2 = MessageMedia.fromFilePath('note/ct/s5/pmse/M2-PM&SE.pdf');
+    const media3 = MessageMedia.fromFilePath('note/ct/s5/pmse/M3-PM&SE.pdf');
+    const media3 = MessageMedia.fromFilePath('note/ct/s5/pmse/M4-PM&SE.pdf');
+    msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');msg.reply(media4,'');
+  }
+
+  if (msg.body == 'Web Programming') {
+    const media1 = MessageMedia.fromFilePath('note/ct/s5/wp/Module 1-1.pdf');
+    const media2 = MessageMedia.fromFilePath('note/ct/s5/wp/Module 2.pdf');
+    const media3 = MessageMedia.fromFilePath('note/ct/s5/wp/Module 3-4.pdf');
+    const media4 = MessageMedia.fromFilePath('note/ct/s5/wp/WT_Module 2 - CSS-1.pdf');
+    const media5 = MessageMedia.fromFilePath('note/ct/s5/wp/WT_Module 2 - CSS-2.pdf');
+    const media6 = MessageMedia.fromFilePath('note/ct/s5/wp/WT_Module 2 - CSS.pdf');
+    const media7 = MessageMedia.fromFilePath('note/ct/s5/wp/WT_Module 2 - Javascript-1.pdf');
+    const media8 = MessageMedia.fromFilePath('note/ct/s5/wp/WT_Module 2 - Javascript-2.pdf');
+    const media9 = MessageMedia.fromFilePath('note/ct/s5/wp/WT_Module 2 - Javascript.pdf');
+    msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');
+  }
+
+  if (msg.body == 'Microprocessor and Interfacing') {
+    const media1 = MessageMedia.fromFilePath('note/ct/s5/mp/MODULE 1 MP.pdf');
+    const media2 = MessageMedia.fromFilePath('note/ct/s5/mp/MODULE 2 MP.pdf');
+    const media3 = MessageMedia.fromFilePath('note/ct/s5/mp/MODULE 3 MP.pdf');
+    const media3 = MessageMedia.fromFilePath('note/ct/s5/mp/MODULE 4 MP.pdf');
+    msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');
+  }
+
+  if (msg.body == 'Cloud Computing') {
+    const media1 = MessageMedia.fromFilePath('note/ct/s5/cloud/cloud m1.pdf');
+    const media2 = MessageMedia.fromFilePath('note/ct/s5/cloud/cloud m2.pdf');
+    const media3 = MessageMedia.fromFilePath('note/ct/s5/cloud/cloud m3.pdf');
+    const media3 = MessageMedia.fromFilePath('note/ct/s5/cloud/cloud m4.pdf');
+    msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');
+  }
+
+//------------------------ct s6 --------------------------------
+
+  if(message.body=='CT-S6'){
+
+    client.sendMessage(message.from, new List('Select Subject', 'Subjects',[{title: 'Select Subject', rows: [{id: 'sdpgrm', title: 'Smart Device Programming'},{id: 'nim', title: 'Network Infrastructure Mangagement'},{id: 'mcct', title: 'Mobile Communication'},{id: 'MicroController', title: 'Micro Controller'},{id: 'cnnn', title: 'Computer Networks'}]}] ,'Computer Engineering Subjects', 'Footer here'), {caption: 'if you used a MessageMedia instance, use the caption here'});
+    
+  }
+
+  if (msg.body == 'Computer Networks') {
+    const media1 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/Ethernet-1-.pdf');
+    const media2 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/Introduction-1-.pdf');
+    const media3 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/MODULE I_CN.pdf');
+    const media3 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/MODULE II_CN.pdf');
+    const media4 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/module3_CN-1-.pdf');
+    const media5 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/Module4_CN-1-.pdf');
+    const media6 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/networklayer-1-.pdf');
+    const media7 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/Networkmodel-1-.pdf');
+    const media8 = MessageMedia.fromFilePath('note/ct/s6/computer netwrk/wirelesslan-1-.pdf');
+    msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');
+    msg.reply(media4,'');msg.reply(media5,'');msg.reply(media6,'');
+    msg.reply(media7,'');msg.reply(media8,'');
+  }
+
+  if (msg.body == 'Smart Device Programming') {
+    const media1 = MessageMedia.fromFilePath('note/ct/s6/sdp/SDP Mod 3.pdf');
+    const media2 = MessageMedia.fromFilePath('note/ct/s6/sdp/SDP_mod1.pdf');
+    const media3 = MessageMedia.fromFilePath('note/ct/s6/sdp/SDP_mod2.pdf');
+    msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');
+  }
+
+  if (msg.body == 'Network Infrastructure Mangagement') {
+    const media1 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_1.pdf');
+    const media2 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_2_part_1.pdf');
+    const media3 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_2_part_2.pdf');
+    const media3 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_3_part_1.pdf');
+    const media4 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_3_part_2.pdf');
+    const media5 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_4_part_1.pdf');
+    const media6 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_module_4_part_2.pdf');
+    const media7 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_MODULE_IV.pdf');
+    const media8 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_moduleII.pdf');
+    const media9 = MessageMedia.fromFilePath('note/ct/s6/nim/NIM_moduleIII-1.pdf');
+    msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');
+    msg.reply(media4,'');msg.reply(media5,'');msg.reply(media6,'');
+    msg.reply(media7,'');msg.reply(media8,'');msg.reply(media9,'');
+    
+  }
+
+  
+ if (msg.body == 'Mobile Communication') {
+    const media1 = MessageMedia.fromFilePath('note/ct/s6/mobile con/MC Module 1.pdf');
+    const media2 = MessageMedia.fromFilePath('note/ct/s6/mobile con/MC Module 2.pdf');
+    const media3 = MessageMedia.fromFilePath('note/ct/s6/mobile con/MC Module 3.pdf');
+    msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');
+    
+  }
+  if (msg.body == 'Micro Controller') {
+    const media1 = MessageMedia.fromFilePath('note/ct/s6/micro contrl/MC_Module 1.pdf');
+    const media2 = MessageMedia.fromFilePath('note/ct/s6/micro contrl/MC_Module 2.pdf');
+    const media3 = MessageMedia.fromFilePath('note/ct/s6/micro contrl/MC_Module 3.pdf');
+    const media4 = MessageMedia.fromFilePath('note/ct/s6/micro contrl/MC_Module 4.pdf');
+    msg.reply(media1,'');msg.reply(media2,'');msg.reply(media3,'');msg.reply(media4,'');
+    
+  }
+
+
+
+
+
+
 
 
 
     
-    })
+      
 
 
 
-
+})
 
     
 
@@ -376,7 +597,40 @@ app.post('/send-message', [
 });
 
 
+// Send media
+app.post('/send-media', async (req, res) => {
+  const number = phoneNumberFormatter(req.body.number);
+  const caption = req.body.caption;
+  const fileUrl = req.body.file;
+  
+  
+  // const media = MessageMedia.fromFilePath('./image-example.png');
+  // const file = req.files.file;
+  // const media = new MessageMedia(file.mimetype, file.data.toString('base64'), file.name);
+  let mimetype;
+  const attachment = await axios.get(fileUrl, {
+    responseType: 'arraybuffer'
+  }).then(response => {
+    mimetype = response.headers['content-type'];
+    return response.data.toString('base64');
+  });
 
+  const media = new MessageMedia(mimetype, attachment, 'Media');
+
+  client.sendMessage(number, media, {
+    caption: caption
+  }).then(response => {
+    res.status(200).json({
+      status: true,
+      response: response
+    });
+  }).catch(err => {
+    res.status(500).json({
+      status: false,
+      response: err
+    });
+  });
+});
 
 const findGroupByName = async function(name) {
   const group = await client.getChats().then(chats => {
